@@ -1,0 +1,2599 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     Charge_1_V1.a2l
+ *
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use. 
+ * 
+ * Code generation for model "Charge_1_V1".
+ *
+ * Model version              : 1.775
+ * Simulink Coder version : 8.13 (R2017b) 24-Jul-2017
+ * C source code generated on : Wed Sep 26 17:05:11 2018
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Generic->32-bit Embedded Processor
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Charge_1_V1_softwareID_v1_260918_170452"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      SeconCar_ThreePhase  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Current_five  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Current_four  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Current_one  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Current_six  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Current_three  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Current_two  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_MaxPliot  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_MinPliot  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT64_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_double 
+      /* Lower Limit            */      -1.7E+308 
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Control_Mode_In  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000014 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      CurrentSP  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      2000000c 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Frequency_High_Point  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      2000002c 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Frequency_Low_Point  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000038 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Frequency_Mid_high  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000030 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Frequency_Mid_low  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000028 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      HVol_High_Point  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000044 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      HVol_Low_Point  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000034 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      HVol_Mid_high  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000040 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      HVol_Mid_low  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000008 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      HVoltage_Factor  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000020 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      V_Frequency  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Vol_High_Point  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      2000003c 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Vol_Low_Point  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000004 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Vol_Mid_high  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000024 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Vol_Mid_low  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000010 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Voltage_Factor  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      2000001c 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Voltage_Mode_Test  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      20000018 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Car1__Authorize  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC 
+      /* Name                   */      Car2_Authorize  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      Charge_1_V1_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Car_type_charge1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       2000c7d0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Car_type_charge2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       2000ca20
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Max_Pilot
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca30
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Min_Pilot
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7dc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_phase1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c548
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_phase2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca0c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_phase3
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7e0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_phase4
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca2c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_phase5
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca1c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_phase6
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7bc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_Limit
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca04
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Mode
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7f4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SP1_P
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c8e4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Frequency
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca08
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Voltage_phase2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c8d4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Voltage_phase3
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7e4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Initial_Current_1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c900
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_SP_Car1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca10
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Max_out
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c524
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Maxpilotcar2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c520
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Minpilotcar2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c8e8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Control_Mode_Out
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca00
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SP2_P
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c800
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Voltage_phase5
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7ec
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Voltage_phase6
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c528
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Initial_current_2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c8dc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_SP_car2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c538
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Power_SP
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c8ec
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Voltage_phase1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000ca18
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Voltage_phase4
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c8fc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_input_car2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c7c0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_Input_car1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      Charge_1_V1_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       2000c530
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SI_FreeHeap
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      Charge_1_V1_CM_uint32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      4294967295
+      ECU_ADDRESS                       2000c7fc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SI_FreeStack
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      Charge_1_V1_CM_uint32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      4294967295
+      ECU_ADDRESS                       2000c8f4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      PilotCar1Raw
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      Charge_1_V1_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       2000c534
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      PilotCar2Raw
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      Charge_1_V1_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       2000c8ce
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Status
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      Charge_1_V1_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       2000c7ca
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      State_Test
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      Charge_1_V1_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       2000ca34
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      State_Test_1
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      Charge_1_V1_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       2000ca29
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      State_Test_2
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      Charge_1_V1_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       2000c7f0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Current_Limit_state
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      Charge_1_V1_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       2000ca14
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Car2State
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      Charge_1_V1_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       2000ca2a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Car1State
+      /* Long identifier        */      ""
+      /* Data type              */      SBYTE
+      /* Conversion method      */      Charge_1_V1_CM_int8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -128
+      /* Upper limit            */      127
+      ECU_ADDRESS                       2000c7f8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SI_CPUload
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000ca15
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      End_SP1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000ca17
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Setpoint1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c7c4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SP_ID
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c8f8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Setpoin_check1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c7c7
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Sent_to_MCU
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c7f1
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Check_ID_Voltage2
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c7f2
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      byte2
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c52c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      byte1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c536
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Check_ID_Voltage1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c7d8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Check_Fre_ID
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c804
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Check_ID_Current1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c7d9
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Check_ID2_Current2
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       2000c8cd
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Enable_card1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c8d0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Enable_card2
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000ca28
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      RFID_Read
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000ca16
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SwitchCar1
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c8d8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      LockCar1off
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c7c5
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SwitchCar2
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c7b8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      LockCar2off
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c7c6
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      counter
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c8e0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      enable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c7e8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      LockCar2On
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c7c8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      LockCar1On
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      Charge_1_V1_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       2000c8f0
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_double
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%15.10"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_uint32
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%10.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_int8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      Charge_1_V1_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       Charge_1_V1
+      /* Long identifier        */       "Charge_1_V1"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_HANcoder_STM32_Target___E407_STM32_algorithm
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_HANcoder_STM32_Target___E407_STM32_algorithm
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm"
+      /begin SUB_GROUP
+        S1_Authorized_card
+        S1_Car1
+        S1_Car2
+        S1_Config
+        S1_Current_SP
+        S1_Energy_Meter
+        S1_Partclie_SP_Receive
+        S1_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Authorized_card
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Authorized card"
+      /begin SUB_GROUP
+        S2_Digital_Input
+        S2_Digital_Input1
+        S2_Digital_Input2
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Car1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1"
+      /begin SUB_GROUP
+        S3_Output_leds
+        S3_Pilotcar1
+        S3_delaytime
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        Car1State
+        Current_Input_car1
+        LockCar1On
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Car2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2"
+      /begin SUB_GROUP
+        S4_Pilotcar2
+        S4_delaytime
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        Car2State
+        Current_input_car2
+        LockCar2On
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Config
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Config"
+      /begin SUB_GROUP
+        S5_System_information
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Current_SP
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP"
+      /begin SUB_GROUP
+        S7_Current_Limit1
+        S7_Subsystem1
+        S7_Subsystem2
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        Control_Mode_In
+        Voltage_Mode_Test
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        Mode
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Energy_Meter
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter"
+      /begin SUB_GROUP
+        S8_Energy_Meter_Recieve
+        S8_Energymeter_Request
+        S8_Particle
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Partclie_SP_Receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive"
+      /begin SUB_GROUP
+        S9_SP1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Subsystem
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Subsystem"
+      /begin REF_CHARACTERISTIC
+        Car1__Authorize
+        Car2_Authorize
+        SeconCar_ThreePhase
+        V_Current_five
+        V_Current_four
+        V_Current_one
+        V_Current_six
+        V_Current_three
+        V_Current_two
+        V_Frequency
+        V_MaxPliot
+        V_MinPliot
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_Digital_Input
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Authorized card/Digital Input"
+      /begin REF_MEASUREMENT
+        Enable_card1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_Digital_Input1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Authorized card/Digital Input1"
+      /begin REF_MEASUREMENT
+        Enable_card2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_Digital_Input2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Authorized card/Digital Input2"
+      /begin REF_MEASUREMENT
+        RFID_Read
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Output_leds
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/Output leds"
+      /begin REF_MEASUREMENT
+        State_Test
+        State_Test_1
+        State_Test_2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Pilotcar1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/Pilotcar1"
+      /begin SUB_GROUP
+        S18_Analog_Input
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        Max_Pilot
+        Min_Pilot
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_delaytime
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/delaytime"
+      /begin SUB_GROUP
+        S19_Off_Delay
+        S19_On_Delay
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Pilotcar2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/Pilotcar2"
+      /begin SUB_GROUP
+        S80_Analog_Input
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        Max_out
+        Maxpilotcar2
+        Minpilotcar2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_delaytime
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/delaytime"
+      /begin SUB_GROUP
+        S81_Off_Delay
+        S81_On_Delay
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_System_information
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Config/System information"
+      /begin SUB_GROUP
+        S141_Get_CPU_load
+        S141_Get_free_Heap
+        S141_Get_free_Stack
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_Current_Limit1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Current_Limit1"
+      /begin REF_MEASUREMENT
+        Current_Limit
+        Current_Limit_state
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_Subsystem1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1"
+      /begin SUB_GROUP
+        S149_Car_type_detection
+        S149_Fre_Control
+        S149_Voltage_Control
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CurrentSP
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        Current_SP_Car1
+        Initial_Current_1
+        Power_SP
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_Subsystem2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2"
+      /begin SUB_GROUP
+        S150_Car_type_detection
+        S150_Frquency_Control
+        S150_Voltage_Control
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        CurrentSP
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        Control_Mode_Out
+        Current_SP_car2
+        Initial_current_2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_Energy_Meter_Recieve
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve"
+      /begin SUB_GROUP
+        S292_CurrentMeter2
+        S292_Current_Meter1
+        S292_Fequency
+        S292_Subsystem
+        S292_Subsystem5
+        S292_Voltage_meter1
+        S292_Voltage_meter2
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_Energymeter_Request
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energymeter_Request"
+      /begin SUB_GROUP
+        S293_Current_Meter_1_
+        S293_RequestMessages_Enable_
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_Particle
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Particle"
+      /begin SUB_GROUP
+        S294_UART_receive_buffer_status
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_SP1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1"
+      /begin SUB_GROUP
+        S942_Read_Gyro
+        S942_Read_Gyro1
+        S942_Read_Gyro2
+        S942_Read_Gyro3
+        S942_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S18_Analog_Input
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/Pilotcar1/Analog Input"
+      /begin REF_MEASUREMENT
+        PilotCar1Raw
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_Off_Delay
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/delaytime/Off Delay"
+      /begin SUB_GROUP
+        S52_Model
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_On_Delay
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/delaytime/On Delay"
+      /begin SUB_GROUP
+        S53_Model
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S80_Analog_Input
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/Pilotcar2/Analog Input"
+      /begin REF_MEASUREMENT
+        PilotCar2Raw
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S81_Off_Delay
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/delaytime/Off Delay"
+      /begin SUB_GROUP
+        S114_Model
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S81_On_Delay
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/delaytime/On Delay"
+      /begin SUB_GROUP
+        S115_Model
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S141_Get_CPU_load
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Config/System information/Get CPU load"
+      /begin REF_MEASUREMENT
+        SI_CPUload
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S141_Get_free_Heap
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Config/System information/Get free Heap"
+      /begin REF_MEASUREMENT
+        SI_FreeHeap
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S141_Get_free_Stack
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Config/System information/Get free Stack"
+      /begin REF_MEASUREMENT
+        SI_FreeStack
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S149_Car_type_detection
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Car_type_detection"
+      /begin REF_MEASUREMENT
+        Car_type_charge1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S149_Fre_Control
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Fre_Control"
+      /begin SUB_GROUP
+        S162_16A_Car
+        S162_32A_Car1
+        S162_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S149_Voltage_Control
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control"
+      /begin SUB_GROUP
+        S165_1phase
+        S165_3phase
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S150_Car_type_detection
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Car_type_detection"
+      /begin REF_MEASUREMENT
+        Car_type_charge2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S150_Frquency_Control
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Frquency_Control"
+      /begin SUB_GROUP
+        S215_16A_Car
+        S215_32A_Car
+        S215_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S150_Voltage_Control
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control"
+      /begin SUB_GROUP
+        S218_1phase
+        S218_3phase
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_CurrentMeter2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/CurrentMeter2"
+      /begin SUB_GROUP
+        S299_Read_Gyro
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_Current_Meter1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Current_Meter1"
+      /begin SUB_GROUP
+        S300_Read_Gyro
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_Fequency
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Fequency"
+      /begin SUB_GROUP
+        S301_Read_Gyro
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_Subsystem
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem"
+      /begin SUB_GROUP
+        S302_FloatConv1
+        S302_FloatConv2
+        S302_FloatConv3
+        S302_FloatConv4
+        S302_FloatConv5
+        S302_FloatConv6
+        S302_FloatConv7
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_Subsystem5
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5"
+      /begin SUB_GROUP
+        S306_FloatConv2
+        S306_FloatConv3
+        S306_FloatConv4
+        S306_FloatConv5
+        S306_FloatConv6
+        S306_FloatConv7
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_Voltage_meter1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1"
+      /begin SUB_GROUP
+        S307_Read_Gyro
+        S307_Read_Gyro1
+        S307_Read_Gyro2
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S292_Voltage_meter2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter2"
+      /begin SUB_GROUP
+        S308_Read_Gyro
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S293_Current_Meter_1_
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energymeter_Request/Current_Meter_1 "
+      /begin SUB_GROUP
+        S796_Read_Gyro1
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        counter
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S293_RequestMessages_Enable_
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energymeter_Request/RequestMessages_Enable "
+      /begin REF_MEASUREMENT
+        enable
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S294_UART_receive_buffer_status
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Particle/UART receive buffer status"
+      /begin REF_MEASUREMENT
+        Status
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S942_Read_Gyro
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro"
+      /begin SUB_GROUP
+        S952_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S942_Read_Gyro1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro1"
+      /begin SUB_GROUP
+        S953_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S942_Read_Gyro2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro2"
+      /begin SUB_GROUP
+        S954_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S942_Read_Gyro3
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro3"
+      /begin SUB_GROUP
+        S955_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S942_Subsystem
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Subsystem"
+      /begin REF_MEASUREMENT
+        SP1_P
+        SP2_P
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S52_Model
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/delaytime/Off Delay/Model"
+      /begin REF_MEASUREMENT
+        LockCar1off
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S53_Model
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car1/delaytime/On Delay/Model"
+      /begin REF_MEASUREMENT
+        SwitchCar1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S114_Model
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/delaytime/Off Delay/Model"
+      /begin REF_MEASUREMENT
+        LockCar2off
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S115_Model
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Car2/delaytime/On Delay/Model"
+      /begin REF_MEASUREMENT
+        SwitchCar2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S162_16A_Car
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Fre_Control/16A_Car"
+      /begin REF_CHARACTERISTIC
+        Frequency_Low_Point
+        Frequency_Mid_high
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S162_32A_Car1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Fre_Control/32A_Car1"
+      /begin REF_CHARACTERISTIC
+        Frequency_Low_Point
+        Frequency_Mid_high
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S162_Subsystem1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Fre_Control/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        Frequency_High_Point
+        Frequency_Low_Point
+        Frequency_Mid_high
+        Frequency_Mid_low
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S165_1phase
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/1phase"
+      /begin SUB_GROUP
+        S185_16A
+        S185_32Acar
+        S185_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S165_3phase
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/3phase"
+      /begin SUB_GROUP
+        S186_16A
+        S186_32Acar
+        S186_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S215_16A_Car
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Frquency_Control/16A_Car"
+      /begin REF_CHARACTERISTIC
+        Frequency_Low_Point
+        Frequency_Mid_high
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S215_32A_Car
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Frquency_Control/32A_Car"
+      /begin REF_CHARACTERISTIC
+        Frequency_Low_Point
+        Frequency_Mid_high
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S215_Subsystem
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Frquency_Control/Subsystem"
+      /begin REF_CHARACTERISTIC
+        Frequency_High_Point
+        Frequency_Low_Point
+        Frequency_Mid_high
+        Frequency_Mid_low
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S218_1phase
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/1phase"
+      /begin SUB_GROUP
+        S238_16A
+        S238_32Acar
+        S238_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S218_3phase
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/3phase"
+      /begin SUB_GROUP
+        S239_16A
+        S239_32Acar
+        S239_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S299_Read_Gyro
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/CurrentMeter2/Read_Gyro"
+      /begin SUB_GROUP
+        S327_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S300_Read_Gyro
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Current_Meter1/Read_Gyro"
+      /begin SUB_GROUP
+        S381_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S301_Read_Gyro
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Fequency/Read_Gyro"
+      /begin SUB_GROUP
+        S427_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv1"
+      /begin REF_MEASUREMENT
+        Frequency
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv2"
+      /begin REF_MEASUREMENT
+        Current_phase6
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv3
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv3"
+      /begin REF_MEASUREMENT
+        Current_phase5
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv4
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv4"
+      /begin REF_MEASUREMENT
+        Current_phase4
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv5
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv5"
+      /begin REF_MEASUREMENT
+        Current_phase3
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv6
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv6"
+      /begin REF_MEASUREMENT
+        Current_phase2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S302_FloatConv7
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem/FloatConv7"
+      /begin REF_MEASUREMENT
+        Current_phase1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S306_FloatConv2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5/FloatConv2"
+      /begin REF_MEASUREMENT
+        Voltage_phase6
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S306_FloatConv3
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5/FloatConv3"
+      /begin REF_MEASUREMENT
+        Voltage_phase5
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S306_FloatConv4
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5/FloatConv4"
+      /begin REF_MEASUREMENT
+        Voltage_phase4
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S306_FloatConv5
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5/FloatConv5"
+      /begin REF_MEASUREMENT
+        Voltage_phase3
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S306_FloatConv6
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5/FloatConv6"
+      /begin REF_MEASUREMENT
+        Voltage_phase2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S306_FloatConv7
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Subsystem5/FloatConv7"
+      /begin REF_MEASUREMENT
+        Voltage_phase1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S307_Read_Gyro
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1/Read_Gyro"
+      /begin SUB_GROUP
+        S705_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S307_Read_Gyro1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1/Read_Gyro1"
+      /begin SUB_GROUP
+        S706_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S307_Read_Gyro2
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1/Read_Gyro2"
+      /begin SUB_GROUP
+        S715_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S308_Read_Gyro
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter2/Read_Gyro"
+      /begin SUB_GROUP
+        S759_UART_receive
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S796_Read_Gyro1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energymeter_Request/Current_Meter_1 /Read_Gyro1"
+      /begin REF_MEASUREMENT
+        Sent_to_MCU
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S952_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro/UART receive"
+      /begin REF_MEASUREMENT
+        Setpoin_check1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S953_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro1/UART receive"
+      /begin REF_MEASUREMENT
+        SP_ID
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S954_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro2/UART receive"
+      /begin REF_MEASUREMENT
+        Setpoint1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S955_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Partclie_SP_Receive/SP1/Read_Gyro3/UART receive"
+      /begin REF_MEASUREMENT
+        End_SP1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S185_16A
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/1phase/16A"
+      /begin REF_CHARACTERISTIC
+        Vol_Low_Point
+        Vol_Mid_high
+        Voltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S185_32Acar
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/1phase/32Acar"
+      /begin REF_CHARACTERISTIC
+        Vol_Low_Point
+        Vol_Mid_high
+        Voltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S185_Subsystem
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/1phase/Subsystem"
+      /begin REF_CHARACTERISTIC
+        Vol_High_Point
+        Vol_Low_Point
+        Vol_Mid_high
+        Vol_Mid_low
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S186_16A
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/3phase/16A"
+      /begin REF_CHARACTERISTIC
+        HVol_Low_Point
+        HVol_Mid_high
+        HVoltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S186_32Acar
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/3phase/32Acar"
+      /begin REF_CHARACTERISTIC
+        HVol_Low_Point
+        HVol_Mid_high
+        HVoltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S186_Subsystem1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem1/Voltage_Control/3phase/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        HVol_High_Point
+        HVol_Low_Point
+        HVol_Mid_high
+        HVol_Mid_low
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S238_16A
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/1phase/16A"
+      /begin REF_CHARACTERISTIC
+        Vol_Low_Point
+        Vol_Mid_high
+        Voltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S238_32Acar
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/1phase/32Acar"
+      /begin REF_CHARACTERISTIC
+        Vol_Low_Point
+        Vol_Mid_high
+        Voltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S238_Subsystem
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/1phase/Subsystem"
+      /begin REF_CHARACTERISTIC
+        Vol_High_Point
+        Vol_Low_Point
+        Vol_Mid_high
+        Vol_Mid_low
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S239_16A
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/3phase/16A"
+      /begin REF_CHARACTERISTIC
+        HVol_Low_Point
+        HVol_Mid_high
+        HVoltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S239_32Acar
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/3phase/32Acar"
+      /begin REF_CHARACTERISTIC
+        HVol_Low_Point
+        HVol_Mid_high
+        HVoltage_Factor
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S239_Subsystem1
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Current_SP/Subsystem2/Voltage_Control/3phase/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        HVol_High_Point
+        HVol_Low_Point
+        HVol_Mid_high
+        HVol_Mid_low
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S327_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/CurrentMeter2/Read_Gyro/UART receive"
+      /begin REF_MEASUREMENT
+        Check_ID2_Current2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S381_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Current_Meter1/Read_Gyro/UART receive"
+      /begin REF_MEASUREMENT
+        Check_ID_Current1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S427_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Fequency/Read_Gyro/UART receive"
+      /begin REF_MEASUREMENT
+        Check_Fre_ID
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S705_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1/Read_Gyro/UART receive"
+      /begin REF_MEASUREMENT
+        Check_ID_Voltage1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S706_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1/Read_Gyro1/UART receive"
+      /begin REF_MEASUREMENT
+        byte1
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S715_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter1/Read_Gyro2/UART receive"
+      /begin REF_MEASUREMENT
+        byte2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S759_UART_receive
+      /* Long identifier        */       "Charge_1_V1/HANcoder STM32 Target - E407-STM32 algorithm/Energy Meter/Energy_Meter_Recieve/Voltage_meter2/Read_Gyro/UART receive"
+      /begin REF_MEASUREMENT
+        Check_ID_Voltage2
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF Charge_1_V1.a2l */
